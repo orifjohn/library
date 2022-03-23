@@ -5,17 +5,17 @@ from .serializers import BookSerializer, LibUserSerializer, RentBookSerializer
 
 
 class BookViewSet(viewsets.ModelViewSet):
-    queryset = Book
+    queryset = Book.objects.all()
     serializer_class = BookSerializer
 
 
 class LibuserViewSet(viewsets.ModelViewSet):
-    queryset = LibUser
+    queryset = LibUser.objects.all()
     serializer_class = LibUserSerializer
 
 
 class RentBookViewSet(viewsets.ModelViewSet):
-    queryset = RentBook
+    queryset = RentBook.objects.all()
     serializer_class = RentBookSerializer
 
 
