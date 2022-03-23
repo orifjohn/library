@@ -6,5 +6,4 @@ router.register(r'books', views.BookViewSet, basename='books')
 router.register(r'libuser', views.LibuserViewSet)
 router.register(r'rentbook', views.RentBookViewSet)
 
-for url in router.urls:
-    print(url)
+
