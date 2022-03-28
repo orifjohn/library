@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import viewsets
 from api.models import Book, LibUser, RentBook
 from .serializers import BookSerializer, LibUserSerializer, RentBookSerializer
+from .pagination import CustomPagination
 
 
 class BookViewSet(viewsets.ViewSet):
@@ -22,8 +23,11 @@ class BookViewSet(viewsets.ViewSet):
 class LibuserViewSet(viewsets.ModelViewSet):
     queryset = LibUser.objects.all()
     serializer_class = LibUserSerializer
+    pagination_class = CustomPagination
 
 
 class RentBookViewSet(viewsets.ModelViewSet):
     queryset = RentBook.objects.all()
     serializer_class = RentBookSerializer
+    pagination_class = CustomPagination
+
