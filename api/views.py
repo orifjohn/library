@@ -29,5 +29,5 @@ class LibuserViewSet(viewsets.ModelViewSet):
 class RentBookViewSet(viewsets.ModelViewSet):
     queryset = RentBook.objects.all()
     serializer_class = RentBookSerializer
-    pagination_class = CustomPagination
+
 
